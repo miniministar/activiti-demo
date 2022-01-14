@@ -7,6 +7,7 @@
 
 ### version 
 ```
+version 1.0.1
 1. git checkout [提交] 
 2. git branch [branch-name]在要修复的提交上新建一个分支进行修复
 3. git checkout 1.0-bug-fix
