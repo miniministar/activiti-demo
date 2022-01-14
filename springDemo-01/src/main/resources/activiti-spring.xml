@@ -11,7 +11,7 @@
     <!-- 数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/actspring"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/actspring?useSSL=false"/>
         <property name="username" value="root"/>
         <property name="password" value="sany_root"/>
         <property name="maxActive" value="3"/>
@@ -24,7 +24,7 @@
         <!-- 使用spring事务管理器 -->
         <property name="transactionManager" ref="transactionManager"/>
         <!-- 数据库策略 -->
-        <property name="databaseSchemaUpdate" value="drop-create"/>
+        <property name="databaseSchemaUpdate" value="true"/>
     </bean>
     <!-- 流程引擎 -->
     <bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
@@ -57,6 +57,6 @@
     <!-- 切面，根据具体项目修改切点配置
     <aop:config proxy-target-class="true">
         <aop:advisor advice-ref="txAdvice"
-                     pointcut="execution(*com.itheima.service.impl..(..))"/>
+                     pointcut="execution(*com.exercisee.service.impl..(..))"/>
     </aop:config>-->
 </beans>
